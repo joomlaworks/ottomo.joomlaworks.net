@@ -3,7 +3,8 @@
 > Ottomo is a free, open source email newsletter and campaign manager for Joomla 3.x UTD, 4, 5 and 6 (one package for all) by JoomlaWorks, the makers of K2. Campaigns are designed in a visual designer with six responsive email templates (each with a dark-mode palette and classic Outlook support), sent to subscribers chosen by topic through PHP mail, Sendmail, SMTP, Amazon SES, Brevo, Mailgun, Mailjet, SendGrid or SendPulse, and tracked (opens, clicks) on the site itself. It includes signup forms with double opt-in, one-click unsubscribe, SPF/DKIM/DMARC checks, imports from Joomla, AcyMailing, Kunena, Meela, VirtueMart and HikaShop, command-line commands and 51 languages. Its technical name is com_ottomo.
 
 - Source code and issues: https://github.com/joomlaworks/ottomo
-- Latest package (install as-is in Joomla's extension installer): https://github.com/joomlaworks/ottomo/archive/refs/heads/main.zip
+- Latest package (install as-is in Joomla's extension installer): https://github.com/joomlaworks/ottomo/archive/refs/tags/v1.0.zip
+- Release notes: https://github.com/joomlaworks/ottomo/releases/tag/v1.0
 - Joomla update server: https://joomlaworks.github.io/ottomo/collection.xml
 - Requirements: Joomla 3.x UTD, Joomla 4, 5 or 6 (tested on 3.18, 4.4, 5.4 and 6.2); PHP 7.1 to 8.5 (within what the Joomla version supports); MySQL/MariaDB, PostgreSQL, or SQLite on Joomla 3.x UTD
 - Licence: GNU General Public License
