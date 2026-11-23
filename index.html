@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Ottomo, email newsletters for Joomla</title>
+    <meta name="description" content="Ottomo is a free, open source email newsletter and campaign manager for Joomla 3.x UTD, 4, 5 and 6: a drag-and-drop designer, six responsive templates, sending through your server or six mail services, open and click tracking on your own site, signup forms and one-click imports." />
+    <meta name="theme-color" content="#fbf6fa" />
+    <link rel="canonical" href="https://ottomo.joomlaworks.net/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ottomo" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://ottomo.joomlaworks.net/" />
+    <meta property="og:title" content="Ottomo, email newsletters for Joomla" />
+    <meta property="og:description" content="A free, open source email newsletter and campaign manager for Joomla 3.x UTD, 4, 5 and 6: design, send and track campaigns from your Joomla administrator, with your subscribers on your own site." />
+    <meta property="og:image" content="https://ottomo.joomlaworks.net/assets/og-image.png?v=20261123" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ottomo, the mail robot for Joomla: the Ottomo dashboard with sent, opened and clicked statistics." />
+
+    <!-- X (Twitter) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@joomlaworks" />
+    <meta name="twitter:title" content="Ottomo, email newsletters for Joomla" />
+    <meta name="twitter:description" content="A free, open source email newsletter and campaign manager for Joomla 3.x UTD, 4, 5 and 6: design, send and track campaigns from your Joomla administrator, with your subscribers on your own site." />
+    <meta name="twitter:image" content="https://ottomo.joomlaworks.net/assets/og-image.png?v=20261123" />
+    <meta name="twitter:image:alt" content="Ottomo, the mail robot for Joomla: the Ottomo dashboard with sent, opened and clicked statistics." />
+    <!-- Structured data (Google) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://www.joomlaworks.net/#organization",
+                "name": "JoomlaWorks Ltd.",
+                "url": "https://www.joomlaworks.net/",
+                "sameAs": [
+                    "https://github.com/joomlaworks",
+                    "https://x.com/joomlaworks"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://ottomo.joomlaworks.net/#website",
+                "url": "https://ottomo.joomlaworks.net/",
+                "name": "Ottomo",
+                "description": "Ottomo, email newsletters and campaigns for Joomla 3.x UTD, 4, 5 and 6.",
+                "inLanguage": "en",
+                "publisher": { "@id": "https://www.joomlaworks.net/#organization" }
+            },
+            {
+                "@type": "SoftwareApplication",
+                "@id": "https://ottomo.joomlaworks.net/#software",
+                "name": "Ottomo",
+                "description": "An email newsletter and campaign manager for Joomla 3.x UTD, 4, 5 and 6: a visual designer with six responsive templates, sending in batches through PHP mail, SMTP, Amazon SES, Brevo, Mailgun, Mailjet, SendGrid or SendPulse, open and click tracking, signup forms with double opt-in, and imports from Joomla, AcyMailing, Kunena, Meela, VirtueMart and HikaShop.",
+                "url": "https://ottomo.joomlaworks.net/",
+                "applicationCategory": "BusinessApplication",
+                "applicationSubCategory": "Email marketing",
+                "operatingSystem": "Linux, BSD, macOS, Windows",
+                "softwareVersion": "1.0",
+                "datePublished": "2026-11-20",
+                "downloadUrl": "https://github.com/joomlaworks/ottomo/archive/refs/heads/main.zip",
+                "releaseNotes": "https://github.com/joomlaworks/ottomo/blob/main/CHANGELOG.md",
+                "softwareRequirements": "Joomla 3.x UTD, Joomla 4, 5 or 6; PHP 7.1 to 8.5",
+                "license": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
+                "isAccessibleForFree": true,
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                "image": "https://ottomo.joomlaworks.net/assets/og-image.png?v=20261123",
+                "screenshot": [
+                    "https://ottomo.joomlaworks.net/assets/shots/utd-dashboard.webp",
+                    "https://ottomo.joomlaworks.net/assets/shots/utd-designer.webp",
+                    "https://ottomo.joomlaworks.net/assets/shots/j6-dashboard.webp"
+                ],
+                "author": { "@id": "https://www.joomlaworks.net/#organization" },
+                "publisher": { "@id": "https://www.joomlaworks.net/#organization" },
+                "sameAs": ["https://github.com/joomlaworks/ottomo"]
+            }
+        ]
+    }
+    </script>
+    <link rel="icon" href="assets/logo/ottomo-icon-light.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/vendor/supermodal/supermodal.min.css?t=20261123" />
+    <link rel="stylesheet" href="assets/css/site.css?t=20261123" />
+    <script>document.documentElement.classList.add("js"); window.SuperModalDefaults = { theme: "dark" };</script>
+</head>
+
+<body id="top">
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<symbol id="i-download" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/></symbol>
+        <symbol id="i-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></symbol>
+        <symbol id="i-rss" viewBox="0 0 16 16"><path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/><path d="M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1m0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1"/></symbol>
+        <symbol id="i-envelope-paper" viewBox="0 0 16 16"><path d="M4 0a2 2 0 0 0-2 2v1.133l-.941.502A2 2 0 0 0 0 5.4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5.4a2 2 0 0 0-1.059-1.765L14 3.133V2a2 2 0 0 0-2-2zm10 4.267.47.25A1 1 0 0 1 15 5.4v.817l-1 .6zm-1 3.15-3.75 2.25L8 8.917l-1.25.75L3 7.417V2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1zm-11-.6-1-.6V5.4a1 1 0 0 1 .53-.882L2 4.267zm13 .566v5.734l-4.778-2.867zm-.035 6.88A1 1 0 0 1 14 15H2a1 1 0 0 1-.965-.738L8 10.083zM1 13.116V7.383l4.778 2.867L1 13.117Z"/></symbol>
+        <symbol id="i-send" viewBox="0 0 16 16"><path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/></symbol>
+        <symbol id="i-palette" viewBox="0 0 16 16"><path d="M8 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m4 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M5.5 7a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/><path d="M16 8c0 3.15-1.866 2.585-3.567 2.07C11.42 9.763 10.465 9.473 10 10c-.603.683-.475 1.819-.351 2.92C9.826 14.495 9.996 16 8 16a8 8 0 1 1 8-8m-8 7c.611 0 .654-.171.655-.176.078-.146.124-.464.07-1.119-.014-.168-.037-.37-.061-.591-.052-.464-.112-1.005-.118-1.462-.01-.707.083-1.61.704-2.314.369-.417.845-.578 1.272-.618.404-.038.812.026 1.16.104.343.077.702.186 1.025.284l.028.008c.346.105.658.199.953.266.653.148.904.083.991.024C14.717 9.38 15 9.161 15 8a7 7 0 1 0-7 7"/></symbol>
+        <symbol id="i-people" viewBox="0 0 16 16"><path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/></symbol>
+        <symbol id="i-person-plus" viewBox="0 0 16 16"><path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/><path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/></symbol>
+        <symbol id="i-shield-check" viewBox="0 0 16 16"><path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/><path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/></symbol>
+        <symbol id="i-moon-stars" viewBox="0 0 16 16"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/><path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/></symbol>
+        <symbol id="i-translate" viewBox="0 0 16 16"><path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/><path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/></symbol>
+        <symbol id="i-terminal" viewBox="0 0 16 16"><path d="M6 9a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3A.5.5 0 0 1 6 9M3.854 4.146a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708z"/><path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/></symbol>
+        <symbol id="i-database" viewBox="0 0 16 16"><path d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313M13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A5 5 0 0 0 13 5.698M14 4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777A5 5 0 0 0 13 8.698m0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13s3.022-.289 4.096-.777c.324-.147.633-.323.904-.525"/></symbol>
+        <symbol id="i-bar-chart" viewBox="0 0 16 16"><path d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"/></symbol>
+        <symbol id="i-arrows-move" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10M.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8"/></symbol>
+        <symbol id="i-layers" viewBox="0 0 16 16"><path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882zm3.515 7.008L14.438 10 8 13.433 1.562 10 4.25 8.567l3.515 1.874a.5.5 0 0 0 .47 0zM8 9.433 1.562 6 8 2.567 14.438 6z"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 16 16"><path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/><path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/></symbol>
+        <symbol id="i-display" viewBox="0 0 16 16"><path d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4q0 1 .25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75Q6 13 6 12H2s-2 0-2-2zm1.398-.855a.76.76 0 0 0-.254.302A1.5 1.5 0 0 0 1 4.01V10c0 .325.078.502.145.602q.105.156.302.254a1.5 1.5 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.76.76 0 0 0 .254-.302 1.5 1.5 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.76.76 0 0 0-.302-.254A1.5 1.5 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145"/></symbol>
+        <symbol id="i-eye" viewBox="0 0 16 16"><path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/><path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/></symbol>
+        <symbol id="i-check-lg" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/></symbol>
+        <symbol id="i-arrow-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/></symbol>
+        <symbol id="i-arrow-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/></symbol>
+        <symbol id="i-robot" viewBox="0 0 16 16"><path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.6 26.6 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.93.93 0 0 1-.765.935c-.845.147-2.34.346-4.235.346s-3.39-.2-4.235-.346A.93.93 0 0 1 3 9.219zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a25 25 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25 25 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135"/><path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2zM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5"/></symbol>
+        <symbol id="i-journal-code" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708m-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708"/><path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/><path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/></symbol>
+        <symbol id="i-boxes" viewBox="0 0 16 16"><path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434zM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567zM7.5 9.933l-2.75 1.571v3.134l2.75-1.571zm1 3.134 2.75 1.571v-3.134L8.5 9.933zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567zm2.242-2.433V3.504L8.5 5.076V8.21zM7.5 8.21V5.076L4.75 3.504v3.134zM5.258 2.643 8 4.21l2.742-1.567L8 1.076zM15 9.933l-2.75 1.571v3.134L15 13.067zM3.75 14.638v-3.134L1 9.933v3.134z"/></symbol>
+        <symbol id="i-speedometer2" viewBox="0 0 16 16"><path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4M3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707M2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10m9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5m.754-4.246a.39.39 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.39.39 0 0 0-.029-.518z"/><path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A8 8 0 0 1 0 10m8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3"/></symbol>
+        <symbol id="i-inbox" viewBox="0 0 16 16"><path d="M4.98 4a.5.5 0 0 0-.39.188L1.54 8H6a.5.5 0 0 1 .5.5 1.5 1.5 0 1 0 3 0A.5.5 0 0 1 10 8h4.46l-3.05-3.812A.5.5 0 0 0 11.02 4zm9.954 5H10.45a2.5 2.5 0 0 1-4.9 0H1.066l.32 2.562a.5.5 0 0 0 .497.438h12.234a.5.5 0 0 0 .496-.438zM3.809 3.563A1.5 1.5 0 0 1 4.981 3h6.038a1.5 1.5 0 0 1 1.172.563l3.7 4.625a.5.5 0 0 1 .105.374l-.39 3.124A1.5 1.5 0 0 1 14.117 13H1.883a1.5 1.5 0 0 1-1.489-1.314l-.39-3.124a.5.5 0 0 1 .106-.374z"/></symbol>
+        <symbol id="i-plug" viewBox="0 0 16 16"><path d="M6 0a.5.5 0 0 1 .5.5V3h3V.5a.5.5 0 0 1 1 0V3h1a.5.5 0 0 1 .5.5v3A3.5 3.5 0 0 1 8.5 10c-.002.434-.01.845-.04 1.22-.041.514-.126 1.003-.317 1.424a2.08 2.08 0 0 1-.97 1.028C6.725 13.9 6.169 14 5.5 14c-.998 0-1.61.33-1.974.718A1.92 1.92 0 0 0 3 16H2c0-.616.232-1.367.797-1.968C3.374 13.42 4.261 13 5.5 13c.581 0 .962-.088 1.218-.219.241-.123.4-.3.514-.55.121-.266.193-.621.23-1.09.027-.34.035-.718.037-1.141A3.5 3.5 0 0 1 4 6.5v-3a.5.5 0 0 1 .5-.5h1V.5A.5.5 0 0 1 6 0M5 4v2.5A2.5 2.5 0 0 0 7.5 9h1A2.5 2.5 0 0 0 11 6.5V4z"/></symbol>
+        <symbol id="i-code-slash" viewBox="0 0 16 16"><path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0"/></symbol>
+        <symbol id="i-ui-checks" viewBox="0 0 16 16"><path d="M7 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zM2 1a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm0 8a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2zm.854-3.646a.5.5 0 0 1-.708 0l-1-1a.5.5 0 1 1 .708-.708l.646.647 1.646-1.647a.5.5 0 1 1 .708.708zm0 8a.5.5 0 0 1-.708 0l-1-1a.5.5 0 0 1 .708-.708l.646.647 1.646-1.647a.5.5 0 0 1 .708.708zM7 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/></symbol>
+        <symbol id="i-hourglass-split" viewBox="0 0 16 16"><path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/></symbol>
+        <symbol id="i-stars" viewBox="0 0 16 16"><path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/></symbol>
+        <symbol id="i-window-sidebar" viewBox="0 0 16 16"><path d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/><path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v2H1V3a1 1 0 0 1 1-1zM1 13V6h4v8H2a1 1 0 0 1-1-1m5 1V6h9v7a1 1 0 0 1-1 1z"/></symbol>
+        <symbol id="i-cursor" viewBox="0 0 16 16"><path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103zM2.25 8.184l3.897 1.67a.5.5 0 0 1 .262.263l1.67 3.897L12.743 3.52z"/></symbol>
+        <symbol id="i-envelope-check" viewBox="0 0 16 16"><path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/><path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686"/></symbol>
+        <symbol id="i-grid-3x3-gap" viewBox="0 0 16 16"><path d="M4 2v2H2V2zm1 12v-2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1m0-5V7a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1m0-5V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1m5 10v-2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1m0-5V7a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1m0-5V2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1M9 2v2H7V2zm5 0v2h-2V2zM4 7v2H2V7zm5 0v2H7V7zm5 0h-2v2h2zM4 12v2H2v-2zm5 0v2H7v-2zm5 0v2h-2v-2zM12 1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm-1 6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm1 4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1z"/></symbol>
+        <symbol id="i-heart" viewBox="0 0 16 16"><path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/></symbol>
+        <symbol id="i-puzzle" viewBox="0 0 16 16"><path d="M3.112 3.645A1.5 1.5 0 0 1 4.605 2H7a.5.5 0 0 1 .5.5v.382c0 .696-.497 1.182-.872 1.469a.5.5 0 0 0-.115.118l-.012.025L6.5 4.5v.003l.003.01q.005.015.036.053a.9.9 0 0 0 .27.194C7.09 4.9 7.51 5 8 5c.492 0 .912-.1 1.19-.24a.9.9 0 0 0 .271-.194.2.2 0 0 0 .039-.063v-.009l-.012-.025a.5.5 0 0 0-.115-.118c-.375-.287-.872-.773-.872-1.469V2.5A.5.5 0 0 1 9 2h2.395a1.5 1.5 0 0 1 1.493 1.645L12.645 6.5h.237c.195 0 .42-.147.675-.48.21-.274.528-.52.943-.52.568 0 .947.447 1.154.862C15.877 6.807 16 7.387 16 8s-.123 1.193-.346 1.638c-.207.415-.586.862-1.154.862-.415 0-.733-.246-.943-.52-.255-.333-.48-.48-.675-.48h-.237l.243 2.855A1.5 1.5 0 0 1 11.395 14H9a.5.5 0 0 1-.5-.5v-.382c0-.696.497-1.182.872-1.469a.5.5 0 0 0 .115-.118l.012-.025.001-.006v-.003a.2.2 0 0 0-.039-.064.9.9 0 0 0-.27-.193C8.91 11.1 8.49 11 8 11s-.912.1-1.19.24a.9.9 0 0 0-.271.194.2.2 0 0 0-.039.063v.003l.001.006.012.025c.016.027.05.068.115.118.375.287.872.773.872 1.469v.382a.5.5 0 0 1-.5.5H4.605a1.5 1.5 0 0 1-1.493-1.645L3.356 9.5h-.238c-.195 0-.42.147-.675.48-.21.274-.528.52-.943.52-.568 0-.947-.447-1.154-.862C.123 9.193 0 8.613 0 8s.123-1.193.346-1.638C.553 5.947.932 5.5 1.5 5.5c.415 0 .733.246.943.52.255.333.48.48.675.48h.238zM4.605 3a.5.5 0 0 0-.498.55l.001.007.29 3.4A.5.5 0 0 1 3.9 7.5h-.782c-.696 0-1.182-.497-1.469-.872a.5.5 0 0 0-.118-.115l-.025-.012L1.5 6.5h-.003a.2.2 0 0 0-.064.039.9.9 0 0 0-.193.27C1.1 7.09 1 7.51 1 8s.1.912.24 1.19c.07.14.14.225.194.271a.2.2 0 0 0 .063.039H1.5l.006-.001.025-.012a.5.5 0 0 0 .118-.115c.287-.375.773-.872 1.469-.872H3.9a.5.5 0 0 1 .498.542l-.29 3.408a.5.5 0 0 0 .497.55h1.878c-.048-.166-.195-.352-.463-.557-.274-.21-.52-.528-.52-.943 0-.568.447-.947.862-1.154C6.807 10.123 7.387 10 8 10s1.193.123 1.638.346c.415.207.862.586.862 1.154 0 .415-.246.733-.52.943-.268.205-.415.39-.463.557h1.878a.5.5 0 0 0 .498-.55l-.001-.007-.29-3.4A.5.5 0 0 1 12.1 8.5h.782c.696 0 1.182.497 1.469.872.05.065.091.099.118.115l.025.012.006.001h.003a.2.2 0 0 0 .064-.039.9.9 0 0 0 .193-.27c.14-.28.24-.7.24-1.191s-.1-.912-.24-1.19a.9.9 0 0 0-.194-.271.2.2 0 0 0-.063-.039H14.5l-.006.001-.025.012a.5.5 0 0 0-.118.115c-.287.375-.773.872-1.469.872H12.1a.5.5 0 0 1-.498-.543l.29-3.407a.5.5 0 0 0-.497-.55H9.517c.048.166.195.352.463.557.274.21.52.528.52.943 0 .568-.447.947-.862 1.154C9.193 5.877 8.613 6 8 6s-1.193-.123-1.638-.346C5.947 5.447 5.5 5.068 5.5 4.5c0-.415.246-.733.52-.943.268-.205.415-.39.463-.557z"/></symbol>
+        <symbol id="i-filetype-svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM0 14.841a1.13 1.13 0 0 0 .401.823q.194.162.478.252.285.091.665.091.507 0 .858-.158.355-.158.54-.44a1.17 1.17 0 0 0 .187-.656q0-.336-.135-.56a1 1 0 0 0-.375-.357 2 2 0 0 0-.565-.21l-.621-.144a1 1 0 0 1-.405-.176.37.37 0 0 1-.143-.299q0-.234.184-.384.187-.152.513-.152.214 0 .37.068a.6.6 0 0 1 .245.181.56.56 0 0 1 .12.258h.75a1.1 1.1 0 0 0-.199-.566 1.2 1.2 0 0 0-.5-.41 1.8 1.8 0 0 0-.78-.152q-.44 0-.776.15-.337.149-.528.421-.19.273-.19.639 0 .302.123.524t.351.367q.229.143.54.213l.618.144q.31.073.462.193a.39.39 0 0 1 .153.326.5.5 0 0 1-.085.29.56.56 0 0 1-.256.193q-.167.07-.413.07-.176 0-.32-.04a.8.8 0 0 1-.248-.115.58.58 0 0 1-.255-.384zm4.575 1.09h.952l1.327-3.999h-.879l-.887 3.138H5.05l-.897-3.138h-.917zm5.483-3.293q.114.228.14.492h-.776a.8.8 0 0 0-.096-.249.7.7 0 0 0-.17-.19.7.7 0 0 0-.237-.126 1 1 0 0 0-.3-.044q-.427 0-.664.302-.235.3-.235.85v.497q0 .352.097.616a.9.9 0 0 0 .305.413.87.87 0 0 0 .518.146 1 1 0 0 0 .457-.097.67.67 0 0 0 .273-.263q.09-.164.09-.364v-.254h-.823v-.59h1.576v.798q0 .29-.096.55a1.3 1.3 0 0 1-.293.457 1.4 1.4 0 0 1-.495.314q-.296.111-.698.111a2 2 0 0 1-.752-.132 1.45 1.45 0 0 1-.534-.377 1.6 1.6 0 0 1-.319-.58 2.5 2.5 0 0 1-.105-.745v-.507q0-.54.199-.949.202-.406.583-.633.383-.228.926-.228.357 0 .635.1.282.1.48.275.2.176.314.407"/></symbol>
+    </svg>
+
+    <a class="skip" href="#main">Skip to the content</a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+        <div class="wrap nav-in">
+            <a class="mark" href="#top" aria-label="Ottomo home"><img src="assets/logo/ottomo-logo-light.svg" width="173" height="64" alt="Ottomo" /></a>
+            <div class="nav-links">
+                <a href="#campaigns">Campaigns</a>
+                <a href="#templates">Templates</a>
+                <a href="#delivery">Deliverability</a>
+                <a href="#audience">Subscribers</a>
+                <a href="#platforms">Joomla 3 to 6</a>
+                <a href="#developers">Developers</a>
+                <a href="#screenshots">Screenshots</a>
+            </div>
+            <div class="nav-right">
+                <a class="icon-btn nav-extra" href="https://github.com/joomlaworks/ottomo/commits/main.atom" title="Updates feed" aria-label="Updates feed" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-rss"></use></svg></a>
+                <a class="icon-btn nav-extra" href="https://github.com/joomlaworks/ottomo" title="GitHub" aria-label="Ottomo on GitHub" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg></a>
+                <a class="btn btn-p btn-sm" href="#install">Install</a>
+                <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M2 4h12M2 8h12M2 12h12"/></svg></button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+
+        <header class="hero">
+            <div class="wrap hero-grid">
+                <div class="hero-copy">
+                    <h1>The mail robot for your Joomla site</h1>
+                    <p class="sub">Ottomo designs, sends and tracks email newsletters from your Joomla administrator. Your subscribers stay in your own database, your emails leave through your server or the mail service you choose, and every open and click is counted on your site. Free and open source.</p>
+                    <div class="ctas">
+                        <a class="btn btn-p" href="https://github.com/joomlaworks/ottomo/archive/refs/heads/main.zip"><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg> Download Ottomo 1.0</a>
+                        <a class="btn btn-g" href="#campaigns">See it at work</a>
+                    </div>
+                    <ul class="facts">
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-boxes"></use></svg> Joomla 3.x UTD, 4, 5 and 6</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-terminal"></use></svg> PHP 7.1 to 8.5</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-database"></use></svg> MySQL, MariaDB, PostgreSQL, SQLite</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-translate"></use></svg> 51 languages</li>
+                    </ul>
+                </div>
+
+                <div class="mailroom" aria-label="Example: Ottomo sends a personalised campaign to four subscribers">
+                    <div class="robot" aria-hidden="true">
+                        <svg viewBox="0 0 128 128" width="150" height="150">
+                            <defs><linearGradient id="robot-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#e2337c"/><stop offset="1" stop-color="#6e1e8f"/></linearGradient><mask id="robot-face" width="128" height="128" x="0" y="0" maskUnits="userSpaceOnUse"><path fill="#fff" d="M0 0h128v128H0z"/><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="m30 54 34 26 34-26"/><circle class="eye" cx="50" cy="61" r="5.5"/><circle class="eye" cx="78" cy="61" r="5.5"/></mask></defs>
+                            <rect width="128" height="128" fill="#f9e7f2" rx="30"/>
+                            <g fill="url(#robot-grad)"><rect width="6" height="18" x="61" y="27" rx="3"/><circle class="antenna" cx="64" cy="23" r="7"/><rect width="10" height="22" x="14" y="62" rx="4"/><rect width="10" height="22" x="104" y="62" rx="4"/><rect width="84" height="62" x="22" y="42" mask="url(#robot-face)" rx="13"/></g>
+                        </svg>
+                    </div>
+                    <div class="inbox">
+                        <div class="inbox-head">
+                            <span class="inbox-label">Subject</span>
+                            <span class="inbox-subject">Hi <code>{{firstname|there}}</code>, your weekly digest is here</span>
+                        </div>
+                        <ul class="mails">
+                            <li class="mail"><span class="ava a1" aria-hidden="true">AJ</span><span class="mail-body"><b>Hi Alice, your weekly digest is here</b><span>alice@example.com</span></span><span class="tag t-click">Clicked</span></li>
+                            <li class="mail"><span class="ava a2" aria-hidden="true">BS</span><span class="mail-body"><b>Hi Bob, your weekly digest is here</b><span>bob@example.com</span></span><span class="tag t-open">Opened</span></li>
+                            <li class="mail"><span class="ava a3" aria-hidden="true">CD</span><span class="mail-body"><b>Hi Carol, your weekly digest is here</b><span>carol@example.com</span></span><span class="tag t-open">Opened</span></li>
+                            <li class="mail"><span class="ava a4" aria-hidden="true"><svg class="icon"><use href="#i-envelope-paper"></use></svg></span><span class="mail-body"><b>Hi there, your weekly digest is here</b><span>reader@example.com</span></span><span class="tag t-sent">Sent</span></li>
+                        </ul>
+                        <div class="sendbar">
+                            <div class="sendbar-text"><span>Sending Weekly Digest #30</span><span class="sendbar-count"><b>4</b> of 4</span></div>
+                            <div class="sendbar-track"><i></i></div>
+                        </div>
+                    </div>
+                    <span class="flyer" aria-hidden="true"><svg class="icon"><use href="#i-envelope-paper"></use></svg></span>
+                </div>
+            </div>
+        </header>
+
+        <div class="airmail" aria-hidden="true"></div>
+
+        <section id="install" class="band-blush">
+            <div class="wrap">
+                <div class="sec-head"><span class="stamp"><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg></span><h2>Install in three steps</h2><p class="lead">One package installs everything: the component, the signup module, the control panel module, the mail service plugins, the content plugins and the command-line commands.</p></div>
+                <ol class="install">
+                    <li><h3>Download</h3><p>Get the <a href="https://github.com/joomlaworks/ottomo/archive/refs/heads/main.zip">Ottomo 1.0 ZIP</a>, or Code &gt; Download ZIP on <a href="https://github.com/joomlaworks/ottomo" target="_blank" rel="noopener noreferrer">GitHub</a>.</p></li>
+                    <li><h3>Upload</h3><p>In Joomla's administrator, go to System &gt; Install &gt; Extensions (Extensions &gt; Install on Joomla 3) and upload the ZIP as it is.</p></li>
+                    <li><h3>Set up</h3><p>In Components &gt; Ottomo &gt; Settings, set your sender and mailer and press Test connection. Add a topic, put the signup module on your site, and write your first campaign.</p></li>
+                </ol>
+                <p class="req"><b>Requirements:</b> <a href="https://j3xutd.joomlaworks.net/" target="_blank" rel="noopener noreferrer">Joomla 3.x UTD</a>, Joomla 4, 5 or 6 (tested on 3.18, 4.4, 5.4 and 6.2); PHP 7.1 to 8.5, within what your Joomla supports; MySQL or MariaDB, PostgreSQL, or SQLite on Joomla 3.x UTD. Updates arrive through Joomla's own update manager.</p>
+            </div>
+        </section>
+
+        <section id="campaigns">
+            <div class="wrap">
+                <div class="sec-head"><span class="stamp"><svg class="icon" aria-hidden="true"><use href="#i-send"></use></svg></span><h2>From idea to inbox in four steps</h2><p class="lead">Every campaign follows the same wizard: who gets it, how it looks, what it says, and sending it. Finished steps get a tick, and you can go back to any of them.</p></div>
+                <div class="feat">
+                    <div class="feat-text">
+                        <ol class="steps">
+                            <li><span><b>Details and recipients.</b> Subject, preview text and sender, then tick the topics to send to. Ottomo counts the active subscribers it will reach, each person once.</span></li>
+                            <li><span><b>Design.</b> Pick one of the six email templates, or one of your own.</span></li>
+                            <li><span><b>Content.</b> Write in the designer, with articles, images and HTML blocks, and personal touches like <code>{{firstname|there}}</code>.</span></li>
+                            <li><span><b>Send.</b> A pre-flight checklist, a test email, then batches with a progress bar. If the tab closes, the campaign resumes with the people still waiting, and nobody gets it twice.</span></li>
+                        </ol>
+                        <p class="note">Afterwards, the same page shows the campaign's recipients, unique open and click rates and its most clicked links. Duplicate any campaign as a new draft to send an improved version.</p>
+                    </div>
+                    <div class="carousel" data-carousel role="region" aria-roledescription="carousel" aria-label="Campaign wizard screenshots">
+                        <div class="car-viewport">
+                            <div class="car-track">
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="1 of 7">
+                                    <a class="shot" href="assets/shots/utd-wizard-details.webp" data-supermodal="campaigns" data-thumb="assets/shots/thumbs/utd-wizard-details.webp" data-caption="Step 1: the subject, the sender and the topics to send to"><img src="assets/shots/thumbs/utd-wizard-details.webp" srcset="assets/shots/thumbs/utd-wizard-details.webp 640w, assets/shots/utd-wizard-details.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The first step of the campaign wizard: subject, preview text, sender and topics, with the number of recipients" loading="lazy" decoding="async" /></a>
+                                    <figcaption>Step 1: the subject, the sender and the topics to send to</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="2 of 7">
+                                    <a class="shot" href="assets/shots/utd-wizard-template.webp" data-supermodal="campaigns" data-thumb="assets/shots/thumbs/utd-wizard-template.webp" data-caption="Step 2: pick one of the email templates"><img src="assets/shots/thumbs/utd-wizard-template.webp" srcset="assets/shots/thumbs/utd-wizard-template.webp 640w, assets/shots/utd-wizard-template.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The second step of the campaign wizard: a grid of email templates" loading="lazy" decoding="async" /></a>
+                                    <figcaption>Step 2: pick one of the email templates</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="3 of 7">
+                                    <a class="shot" href="assets/shots/utd-designer.webp" data-supermodal="campaigns" data-thumb="assets/shots/thumbs/utd-designer.webp" data-caption="Step 3: write the email in the designer"><img src="assets/shots/thumbs/utd-designer.webp" srcset="assets/shots/thumbs/utd-designer.webp 640w, assets/shots/utd-designer.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The designer: a two-column email being edited in place, with the editing toolbar" loading="lazy" decoding="async" /></a>
+                                    <figcaption>Step 3: write the email in the designer</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="4 of 7">
+                                    <a class="shot" href="assets/shots/utd-wizard-send.webp" data-supermodal="campaigns" data-thumb="assets/shots/thumbs/utd-wizard-send.webp" data-caption="Step 4: send, then follow the results"><img src="assets/shots/thumbs/utd-wizard-send.webp" srcset="assets/shots/thumbs/utd-wizard-send.webp 640w, assets/shots/utd-wizard-send.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The last step of the wizard on a sent campaign: summary, recipients, open and click rates, most clicked links" loading="lazy" decoding="async" /></a>
+                                    <figcaption>Step 4: send, then follow the results</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="5 of 7">
+                                    <a class="shot" href="assets/shots/utd-preview.webp" data-supermodal="campaigns" data-thumb="assets/shots/thumbs/utd-preview.webp" data-caption="Preview on a desktop width"><img src="assets/shots/thumbs/utd-preview.webp" srcset="assets/shots/thumbs/utd-preview.webp 640w, assets/shots/utd-preview.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The campaign preview dialog at desktop width" loading="lazy" decoding="async" /></a>
+                                    <figcaption>Preview on a desktop width</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="6 of 7">
+                                    <a class="shot" href="assets/shots/utd-preview-mobile-dark.webp" data-supermodal="campaigns" data-thumb="assets/shots/thumbs/utd-preview-mobile-dark.webp" data-caption="Preview on a phone width, in dark mode"><img src="assets/shots/thumbs/utd-preview-mobile-dark.webp" srcset="assets/shots/thumbs/utd-preview-mobile-dark.webp 640w, assets/shots/utd-preview-mobile-dark.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The campaign preview dialog at phone width with the email in dark mode" loading="lazy" decoding="async" /></a>
+                                    <figcaption>Preview on a phone width, in dark mode</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="7 of 7">
+                                    <a class="shot" href="assets/shots/utd-campaigns.webp" data-supermodal="campaigns" data-thumb="assets/shots/thumbs/utd-campaigns.webp" data-caption="Every campaign with its open and click rates"><img src="assets/shots/thumbs/utd-campaigns.webp" srcset="assets/shots/thumbs/utd-campaigns.webp 640w, assets/shots/utd-campaigns.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The Email Campaigns list with status, date sent, recipients, open and click rates" loading="lazy" decoding="async" /></a>
+                                    <figcaption>Every campaign with its open and click rates</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="designer" class="band-mist">
+            <div class="wrap">
+                <div class="sec-head"><span class="stamp"><svg class="icon" aria-hidden="true"><use href="#i-arrows-move"></use></svg></span><h2>A designer that writes like a document</h2><p class="lead">Click into the email and type. No blocks to configure, no HTML to learn, and the result is email-safe HTML that renders in Gmail, Apple Mail and Outlook.</p></div>
+                <div class="core">
+                    <div><h3><svg class="icon" aria-hidden="true"><use href="#i-cursor"></use></svg>Edit in place</h3><p>Bold, italic, headings, lists, links and an email-safe font menu, right on the email. Pasted text arrives clean.</p></div>
+                    <div><h3><svg class="icon" aria-hidden="true"><use href="#i-layers"></use></svg>Add content</h3><p>A "+" in every position adds Joomla articles, K2 items, images from the Media Manager or your own HTML.</p></div>
+                    <div><h3><svg class="icon" aria-hidden="true"><use href="#i-arrows-move"></use></svg>Drag and drop</h3><p>Move blocks within and between positions with the mouse, or with the arrow keys.</p></div>
+                    <div><h3><svg class="icon" aria-hidden="true"><use href="#i-code-slash"></use></svg>HTML and plain text</h3><p>A code editor for full control, kept in sync with the visual editor, and a plain-text version sent alongside.</p></div>
+                    <div><h3><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>Desktop and phone</h3><p>Switch the preview width while you write; columns stack on phones on their own.</p></div>
+                    <div><h3><svg class="icon" aria-hidden="true"><use href="#i-people"></use></svg>Personal</h3><p>First name, company, city and other profile fields, in the subject and the content, with a fallback when a value is missing.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="templates">
+            <div class="wrap">
+                <div class="sec-head"><span class="stamp"><svg class="icon" aria-hidden="true"><use href="#i-palette"></use></svg></span><h2>Six email templates, light and dark</h2><p class="lead">600 pixels wide, responsive, with sample content to start from. Each has its own dark palette for Apple Mail, iOS Mail and other dark-mode clients, and renders properly in classic Outlook for Windows.</p></div>
+                <ul class="tpl-grid">
+                    <li><a class="tpl" href="assets/templates/minimal-1col.webp" data-supermodal="templates" data-title="Minimal, 1 column" data-caption="Clean everyday newsletter" data-thumb="assets/templates/minimal-1col-thumb.webp"><span class="tpl-img"><img src="assets/templates/minimal-1col-thumb.webp" width="500" height="355" alt="The Minimal, 1 column email template" loading="lazy" decoding="async" /></span><span class="tpl-name">Minimal, 1 column</span><span class="tpl-desc">Clean everyday newsletter</span></a></li>
+                    <li><a class="tpl" href="assets/templates/minimal-2col.webp" data-supermodal="templates" data-title="Minimal, 2 columns" data-caption="A main column and a sidebar" data-thumb="assets/templates/minimal-2col-thumb.webp"><span class="tpl-img"><img src="assets/templates/minimal-2col-thumb.webp" width="500" height="355" alt="The Minimal, 2 columns email template" loading="lazy" decoding="async" /></span><span class="tpl-name">Minimal, 2 columns</span><span class="tpl-desc">A main column and a sidebar</span></a></li>
+                    <li><a class="tpl" href="assets/templates/announcement.webp" data-supermodal="templates" data-title="Announcement" data-caption="One message, one call to action" data-thumb="assets/templates/announcement-thumb.webp"><span class="tpl-img"><img src="assets/templates/announcement-thumb.webp" width="500" height="355" alt="The Announcement email template" loading="lazy" decoding="async" /></span><span class="tpl-name">Announcement</span><span class="tpl-desc">One message, one call to action</span></a></li>
+                    <li><a class="tpl" href="assets/templates/studio.webp" data-supermodal="templates" data-title="Studio" data-caption="Editorial, with a serif headline and a dark closing band" data-thumb="assets/templates/studio-thumb.webp"><span class="tpl-img"><img src="assets/templates/studio-thumb.webp" width="500" height="355" alt="The Studio email template" loading="lazy" decoding="async" /></span><span class="tpl-name">Studio</span><span class="tpl-desc">Editorial, with a serif headline and a dark closing band</span></a></li>
+                    <li><a class="tpl" href="assets/templates/linen.webp" data-supermodal="templates" data-title="Linen" data-caption="Warm neutrals, product, quote and event cards" data-thumb="assets/templates/linen-thumb.webp"><span class="tpl-img"><img src="assets/templates/linen-thumb.webp" width="500" height="355" alt="The Linen email template" loading="lazy" decoding="async" /></span><span class="tpl-name">Linen</span><span class="tpl-desc">Warm neutrals, product, quote and event cards</span></a></li>
+                    <li><a class="tpl" href="assets/templates/starter.webp" data-supermodal="templates" data-title="Template Starter" data-caption="Plain and documented: the base for your own" data-thumb="assets/templates/starter-thumb.webp"><span class="tpl-img"><img src="assets/templates/starter-thumb.webp" width="500" height="355" alt="The Template Starter email template" loading="lazy" decoding="async" /></span><span class="tpl-name">Template Starter</span><span class="tpl-desc">Plain and documented: the base for your own</span></a></li>
+                </ul>
+                <p class="note center">Make your own: drop a folder into your site template's <code>html/ottomo/</code> and Ottomo picks it up, or install a template package. The <a href="https://github.com/joomlaworks/ottomo/blob/main/TEMPLATE-GUIDE.md" target="_blank" rel="noopener noreferrer">template guide</a> documents the format, every placeholder and the email HTML that works everywhere.</p>
+            </div>
+        </section>
+
+        <section id="delivery" class="band-blush">
+            <div class="wrap">
+                <div class="sec-head"><span class="stamp"><svg class="icon" aria-hidden="true"><use href="#i-envelope-check"></use></svg></span><h2>Made to reach the inbox</h2><p class="lead">Gmail, Yahoo and Outlook have strict rules for bulk senders. Ottomo follows them by default, and checks your setup before you press Send.</p></div>
+                <div class="feat flip">
+                    <div class="feat-text">
+                        <ul class="ticks">
+                            <li><b>One-click unsubscribe</b> headers (RFC 8058), as Gmail and Yahoo require of bulk senders.</li>
+                            <li><b>SPF, DKIM and DMARC</b> of your sender's domain checked in the pre-flight checklist and in Settings.</li>
+                            <li><b>No Gmail clipping:</b> emails are minified, and the checklist shows the size against Gmail's 102 KB limit.</li>
+                            <li><b>Footers Gmail won't fold away,</b> and a Feedback-ID header for Gmail Postmaster Tools.</li>
+                            <li><b>Double opt-in</b> for new subscribers, and unsubscribed addresses kept as suppressed: never re-added by an import.</li>
+                            <li><b>A compliance footer</b> with your postal address, and your own line on why people get the email.</li>
+                        </ul>
+                    </div>
+                    <div class="checklist" aria-label="Example: the pre-flight checklist before sending">
+                        <div class="checklist-head"><svg class="icon" aria-hidden="true"><use href="#i-ui-checks"></use></svg><b>Pre-flight checklist</b><span>Weekly Digest #30</span></div>
+                        <ul>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check-lg"></use></svg><span>Subject and sender</span><em>Set</em></li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check-lg"></use></svg><span>Recipients</span><em>140 subscribers</em></li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check-lg"></use></svg><span>Unsubscribe link</span><em>In the footer</em></li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check-lg"></use></svg><span>Changes saved</span><em>Yes</em></li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check-lg"></use></svg><span>Sender domain</span><em>SPF, DKIM, DMARC</em></li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check-lg"></use></svg><span>Email size</span><em>38 KB of 102 KB</em></li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#i-check-lg"></use></svg><span>Test email</span><em>Sent to you</em></li>
+                        </ul>
+                        <div class="checklist-foot"><span class="btn btn-p btn-sm" aria-hidden="true"><svg class="icon"><use href="#i-send"></use></svg> Send now</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sending">
+            <div class="wrap">
+                <div class="sec-head"><span class="stamp"><svg class="icon" aria-hidden="true"><use href="#i-plug"></use></svg></span><h2>Send through your server, or a mail service</h2><p class="lead">PHP mail, Sendmail and SMTP work out of the box. For large lists, connect one of six mail services with an API key: each is a small plugin, with no SDK to install.</p></div>
+                <ul class="services">
+                    <li><b>Amazon SES</b><span>Paced to your account's send rate</span></li>
+                    <li><b>Brevo</b><span>Per-recipient personalisation</span></li>
+                    <li><b>Mailgun</b><span>US and EU regions</span></li>
+                    <li><b>Mailjet</b><span>Per-message results</span></li>
+                    <li><b>SendGrid</b><span>Web API v3</span></li>
+                    <li><b>SendPulse</b><span>Throttled emails retried</span></li>
+                    <li><b>SMTP</b><span>One connection per batch</span></li>
+                    <li><b>PHP mail, Sendmail</b><span>Joomla's own mailer</span></li>
+                </ul>
+                <p class="note center">Mail services report their own figures to the dashboard. Whatever you send through, batches go only to subscribers who haven't received the campaign, so an interrupted send resumes where it stopped.</p>
+            </div>
+        </section>
+
+        <section id="audience" class="band-mist">
+            <div class="wrap">
+                <div class="sec-head"><span class="stamp"><svg class="icon" aria-hidden="true"><use href="#i-people"></use></svg></span><h2>Your audience, on your site</h2><p class="lead">Subscribers live in your Joomla database, not in someone else's cloud. Bring in the people you already have in a few clicks.</p></div>
+                <div class="feat">
+                    <div class="feat-text">
+                        <h3>Import from what you already run</h3>
+                        <p>Each source shows how many addresses it holds, and imports in batches that keep any site within PHP's time limits: 50,000 forum members take about four minutes.</p>
+                        <ul class="ticks">
+                            <li><b>Joomla Users:</b> activated accounts that aren't blocked</li>
+                            <li><b>AcyMailing</b> 5 and 6: subscribers, and those who left as suppressed</li>
+                            <li><b>Kunena</b> and <b>Meela:</b> forum members who can sign in</li>
+                            <li><b>VirtueMart</b> and <b>HikaShop:</b> customers and guest buyers, with their addresses</li>
+                            <li><b>CSV or pasted text,</b> and a CSV export of what you see</li>
+                        </ul>
+                        <p class="note">Topics are your mailing lists. Subscribers can be in several, with a profile (company, city, phone and more) and a status: subscribed, pending or unsubscribed.</p>
+                    </div>
+                    <div class="carousel" data-carousel role="region" aria-roledescription="carousel" aria-label="Subscriber screenshots">
+                        <div class="car-viewport">
+                            <div class="car-track">
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
+                                    <a class="shot" href="assets/shots/utd-subscribers.webp" data-supermodal="audience" data-thumb="assets/shots/thumbs/utd-subscribers.webp" data-caption="Subscribers, with status pills and filters"><img src="assets/shots/thumbs/utd-subscribers.webp" srcset="assets/shots/thumbs/utd-subscribers.webp 640w, assets/shots/utd-subscribers.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The subscribers list with search, filters and status pills" loading="lazy" decoding="async" /></a>
+                                    <figcaption>Subscribers, with status pills and filters</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+                                    <a class="shot" href="assets/shots/utd-import.webp" data-supermodal="audience" data-thumb="assets/shots/thumbs/utd-import.webp" data-caption="Import from text, a CSV file or another extension"><img src="assets/shots/thumbs/utd-import.webp" srcset="assets/shots/thumbs/utd-import.webp 640w, assets/shots/utd-import.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The import dialog: paste addresses, upload a CSV file or import from Joomla, AcyMailing, Kunena, Meela, VirtueMart or HikaShop" loading="lazy" decoding="async" /></a>
+                                    <figcaption>Import from text, a CSV file or another extension</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+                                    <a class="shot" href="assets/shots/utd-subscriber-edit.webp" data-supermodal="audience" data-thumb="assets/shots/thumbs/utd-subscriber-edit.webp" data-caption="A subscriber&#x27;s profile and topics"><img src="assets/shots/thumbs/utd-subscriber-edit.webp" srcset="assets/shots/thumbs/utd-subscriber-edit.webp 640w, assets/shots/utd-subscriber-edit.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="A subscriber edit form with profile fields and topics" loading="lazy" decoding="async" /></a>
+                                    <figcaption>A subscriber&#x27;s profile and topics</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
+                                    <a class="shot" href="assets/shots/utd-topics.webp" data-supermodal="audience" data-thumb="assets/shots/thumbs/utd-topics.webp" data-caption="Topics are your mailing lists"><img src="assets/shots/thumbs/utd-topics.webp" srcset="assets/shots/thumbs/utd-topics.webp 640w, assets/shots/utd-topics.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The topics list with the number of active subscribers per topic" loading="lazy" decoding="async" /></a>
+                                    <figcaption>Topics are your mailing lists</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="statistics">
+            <div class="wrap">
+                <div class="sec-head"><span class="stamp"><svg class="icon" aria-hidden="true"><use href="#i-bar-chart"></use></svg></span><h2>Opens and clicks, without third parties</h2><p class="lead">A tracking pixel counts opens and every link counts clicks, stored on your site. External links are signed, so the tracker can't be used as an open redirect.</p></div>
+                <div class="feat flip">
+                    <div class="feat-text">
+                        <ul class="ticks">
+                            <li><b>The dashboard:</b> sent, opened and clicked over a day, week, month or any range, per topic</li>
+                            <li><b>Every campaign:</b> recipients, unique open and click rates and its most clicked links</li>
+                            <li><b>The control panel module:</b> the same statistics on Joomla's own dashboard, with quick links</li>
+                            <li><b>Mail services</b> add their own delivery figures</li>
+                        </ul>
+                    </div>
+                    <div class="carousel" data-carousel role="region" aria-roledescription="carousel" aria-label="Statistics screenshots">
+                        <div class="car-viewport">
+                            <div class="car-track">
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
+                                    <a class="shot" href="assets/shots/utd-dashboard.webp" data-supermodal="stats" data-thumb="assets/shots/thumbs/utd-dashboard.webp" data-caption="The dashboard: sent, opened and clicked over time"><img src="assets/shots/thumbs/utd-dashboard.webp" srcset="assets/shots/thumbs/utd-dashboard.webp 640w, assets/shots/utd-dashboard.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The Ottomo dashboard with sent, opened and clicked totals, a chart and the latest campaigns" loading="lazy" decoding="async" /></a>
+                                    <figcaption>The dashboard: sent, opened and clicked over time</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+                                    <a class="shot" href="assets/shots/utd-cpanel.webp" data-supermodal="stats" data-thumb="assets/shots/thumbs/utd-cpanel.webp" data-caption="The control panel module on Joomla 3.x UTD"><img src="assets/shots/thumbs/utd-cpanel.webp" srcset="assets/shots/thumbs/utd-cpanel.webp 640w, assets/shots/utd-cpanel.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="Joomla 3.x UTD&#x27;s control panel with Ottomo&#x27;s statistics module" loading="lazy" decoding="async" /></a>
+                                    <figcaption>The control panel module on Joomla 3.x UTD</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+                                    <a class="shot" href="assets/shots/j6-cpanel.webp" data-supermodal="stats" data-thumb="assets/shots/thumbs/j6-cpanel.webp" data-caption="The same module on Joomla 6&#x27;s Home Dashboard"><img src="assets/shots/thumbs/j6-cpanel.webp" srcset="assets/shots/thumbs/j6-cpanel.webp 640w, assets/shots/j6-cpanel.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="Joomla 6&#x27;s Home Dashboard with Ottomo&#x27;s statistics module" loading="lazy" decoding="async" /></a>
+                                    <figcaption>The same module on Joomla 6&#x27;s Home Dashboard</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
+                                    <a class="shot" href="assets/shots/utd-dashboard-dark.webp" data-supermodal="stats" data-thumb="assets/shots/thumbs/utd-dashboard-dark.webp" data-caption="The dashboard in the administrator&#x27;s dark scheme"><img src="assets/shots/thumbs/utd-dashboard-dark.webp" srcset="assets/shots/thumbs/utd-dashboard-dark.webp 640w, assets/shots/utd-dashboard-dark.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The Ottomo dashboard in dark mode" loading="lazy" decoding="async" /></a>
+                                    <figcaption>The dashboard in the administrator&#x27;s dark scheme</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="signup" class="band-blush">
+            <div class="wrap">
+                <div class="sec-head"><span class="stamp"><svg class="icon" aria-hidden="true"><use href="#i-inbox"></use></svg></span><h2>Signup forms that look like your site</h2><p class="lead">The signup module comes in two layouts, a compact one for sidebars and a full-width section with topics as chips. Its CSS steps aside, so your template's fonts, fields and buttons apply.</p></div>
+                <div class="feat">
+                    <div class="feat-text">
+                        <ul class="ticks">
+                            <li><b>Choose the fields:</b> the topics offered, the profile fields shown, which are required, and an intro text</li>
+                            <li><b>Spam protection</b> with Joomla's captcha plugins and a honeypot field</li>
+                            <li><b>Double opt-in</b> with an activation email in HTML and plain text</li>
+                            <li><b>A preferences page</b> linked from every email: profile, topics, unsubscribe or delete the account</li>
+                            <li><b>A public archive</b> of sent campaigns, each readable in the browser</li>
+                        </ul>
+                        <div class="phones">
+                            <figure class="phone"><a class="shot" href="assets/shots/utd-phone-frontend.webp" data-supermodal="signup-phones" data-caption="Hammond on a phone"><img src="assets/shots/utd-phone-frontend.webp" width="390" height="844" alt="Hammond on a phone" loading="lazy" decoding="async" /></a><figcaption>Hammond on a phone</figcaption></figure>
+                            <figure class="phone"><a class="shot" href="assets/shots/j6-phone-frontend.webp" data-supermodal="signup-phones" data-caption="Cassiopeia on a phone"><img src="assets/shots/j6-phone-frontend.webp" width="390" height="844" alt="Cassiopeia on a phone" loading="lazy" decoding="async" /></a><figcaption>Cassiopeia on a phone</figcaption></figure>
+                        </div>
+                    </div>
+                    <div class="carousel" data-carousel role="region" aria-roledescription="carousel" aria-label="Frontend screenshots">
+                        <div class="car-viewport">
+                            <div class="car-track">
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="1 of 5">
+                                    <a class="shot" href="assets/shots/utd-frontend.webp" data-supermodal="signup" data-thumb="assets/shots/thumbs/utd-frontend.webp" data-caption="The signup module on Hammond (Joomla 3.x UTD)"><img src="assets/shots/thumbs/utd-frontend.webp" srcset="assets/shots/thumbs/utd-frontend.webp 640w, assets/shots/utd-frontend.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The Section layout of the signup module at the top of the Hammond News home page" loading="lazy" decoding="async" /></a>
+                                    <figcaption>The signup module on Hammond (Joomla 3.x UTD)</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="2 of 5">
+                                    <a class="shot" href="assets/shots/j6-frontend.webp" data-supermodal="signup" data-thumb="assets/shots/thumbs/j6-frontend.webp" data-caption="Both layouts on Cassiopeia (Joomla 6)"><img src="assets/shots/thumbs/j6-frontend.webp" srcset="assets/shots/thumbs/j6-frontend.webp 640w, assets/shots/j6-frontend.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The Section and Compact layouts of the signup module on Joomla 6&#x27;s Cassiopeia" loading="lazy" decoding="async" /></a>
+                                    <figcaption>Both layouts on Cassiopeia (Joomla 6)</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="3 of 5">
+                                    <a class="shot" href="assets/shots/utd-preferences.webp" data-supermodal="signup" data-thumb="assets/shots/thumbs/utd-preferences.webp" data-caption="The preferences page, linked from every email"><img src="assets/shots/thumbs/utd-preferences.webp" srcset="assets/shots/thumbs/utd-preferences.webp 640w, assets/shots/utd-preferences.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The subscription preferences page with email, topics, Save and Delete account" loading="lazy" decoding="async" /></a>
+                                    <figcaption>The preferences page, linked from every email</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="4 of 5">
+                                    <a class="shot" href="assets/shots/utd-campaign-public.webp" data-supermodal="signup" data-thumb="assets/shots/thumbs/utd-campaign-public.webp" data-caption="A campaign in the browser (&quot;View in browser&quot;)"><img src="assets/shots/thumbs/utd-campaign-public.webp" srcset="assets/shots/thumbs/utd-campaign-public.webp 640w, assets/shots/utd-campaign-public.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="A sent campaign viewed in the browser" loading="lazy" decoding="async" /></a>
+                                    <figcaption>A campaign in the browser (&quot;View in browser&quot;)</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="5 of 5">
+                                    <a class="shot" href="assets/shots/utd-archive.webp" data-supermodal="signup" data-thumb="assets/shots/thumbs/utd-archive.webp" data-caption="The archive of sent campaigns"><img src="assets/shots/thumbs/utd-archive.webp" srcset="assets/shots/thumbs/utd-archive.webp 640w, assets/shots/utd-archive.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The public archive of sent campaigns inside the Hammond template" loading="lazy" decoding="async" /></a>
+                                    <figcaption>The archive of sent campaigns</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="platforms">
+            <div class="wrap">
+                <div class="sec-head"><span class="stamp"><svg class="icon" aria-hidden="true"><use href="#i-boxes"></use></svg></span><h2>One package, Joomla 3.x UTD to Joomla 6</h2><p class="lead">The same ZIP installs on Joomla 3.x UTD, 4, 5 and 6, and Ottomo looks the same in Prothero and Atum, in light and dark, on a wide screen, a tablet or a phone.</p></div>
+                <div class="compare">
+                    <figure><a class="shot" href="assets/shots/utd-dashboard.webp" data-supermodal="compare" data-caption="Joomla 3.x UTD, Prothero"><img src="assets/shots/thumbs/utd-dashboard.webp" srcset="assets/shots/thumbs/utd-dashboard.webp 640w, assets/shots/utd-dashboard.webp 1920w" sizes="(min-width: 1100px) 560px, 92vw" width="1920" height="1080" alt="The Ottomo dashboard on Joomla 3.x UTD" loading="lazy" decoding="async" /></a><figcaption><b>Joomla 3.x UTD</b> with Prothero</figcaption></figure>
+                    <figure><a class="shot" href="assets/shots/j6-dashboard.webp" data-supermodal="compare" data-caption="Joomla 6, Atum"><img src="assets/shots/thumbs/j6-dashboard.webp" srcset="assets/shots/thumbs/j6-dashboard.webp 640w, assets/shots/j6-dashboard.webp 1920w" sizes="(min-width: 1100px) 560px, 92vw" width="1920" height="1080" alt="The Ottomo dashboard on Joomla 6" loading="lazy" decoding="async" /></a><figcaption><b>Joomla 4, 5 and 6</b> with Atum</figcaption></figure>
+                </div>
+                <div class="feat flip">
+                    <div class="feat-text">
+                        <h3>At home in every administrator</h3>
+                        <p>Ottomo keeps its own sidebar in every Joomla. When the room gets tight, under Atum's menu or on a tablet, it folds into a menu button that slides the sidebar over the page.</p>
+                        <div class="phones">
+                            <figure class="phone"><a class="shot" href="assets/shots/utd-phone-dashboard.webp" data-supermodal="platforms-phones" data-caption="The dashboard on a phone"><img src="assets/shots/utd-phone-dashboard.webp" width="390" height="844" alt="The dashboard on a phone" loading="lazy" decoding="async" /></a><figcaption>The dashboard on a phone</figcaption></figure>
+                            <figure class="phone"><a class="shot" href="assets/shots/utd-phone-drawer.webp" data-supermodal="platforms-phones" data-caption="Ottomo&#x27;s menu on a phone"><img src="assets/shots/utd-phone-drawer.webp" width="390" height="844" alt="Ottomo&#x27;s menu on a phone" loading="lazy" decoding="async" /></a><figcaption>Ottomo&#x27;s menu on a phone</figcaption></figure>
+                        </div>
+                    </div>
+                    <div class="carousel" data-carousel role="region" aria-roledescription="carousel" aria-label="Ottomo on Joomla 6 screenshots">
+                        <div class="car-viewport">
+                            <div class="car-track">
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="1 of 5">
+                                    <a class="shot" href="assets/shots/j6-campaigns.webp" data-supermodal="platforms" data-thumb="assets/shots/thumbs/j6-campaigns.webp" data-caption="Email campaigns on Joomla 6"><img src="assets/shots/thumbs/j6-campaigns.webp" srcset="assets/shots/thumbs/j6-campaigns.webp 640w, assets/shots/j6-campaigns.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The Email Campaigns list on Joomla 6" loading="lazy" decoding="async" /></a>
+                                    <figcaption>Email campaigns on Joomla 6</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="2 of 5">
+                                    <a class="shot" href="assets/shots/j6-designer.webp" data-supermodal="platforms" data-thumb="assets/shots/thumbs/j6-designer.webp" data-caption="The designer on Joomla 6"><img src="assets/shots/thumbs/j6-designer.webp" srcset="assets/shots/thumbs/j6-designer.webp 640w, assets/shots/j6-designer.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The designer on Joomla 6" loading="lazy" decoding="async" /></a>
+                                    <figcaption>The designer on Joomla 6</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="3 of 5">
+                                    <a class="shot" href="assets/shots/j6-wizard-send.webp" data-supermodal="platforms" data-thumb="assets/shots/thumbs/j6-wizard-send.webp" data-caption="A sent campaign&#x27;s results on Joomla 6"><img src="assets/shots/thumbs/j6-wizard-send.webp" srcset="assets/shots/thumbs/j6-wizard-send.webp 640w, assets/shots/j6-wizard-send.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="A sent campaign with its results on Joomla 6" loading="lazy" decoding="async" /></a>
+                                    <figcaption>A sent campaign&#x27;s results on Joomla 6</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="4 of 5">
+                                    <a class="shot" href="assets/shots/j6-campaigns-dark.webp" data-supermodal="platforms" data-thumb="assets/shots/thumbs/j6-campaigns-dark.webp" data-caption="Atum&#x27;s dark scheme"><img src="assets/shots/thumbs/j6-campaigns-dark.webp" srcset="assets/shots/thumbs/j6-campaigns-dark.webp 640w, assets/shots/j6-campaigns-dark.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The Email Campaigns list on Joomla 6 in dark mode" loading="lazy" decoding="async" /></a>
+                                    <figcaption>Atum&#x27;s dark scheme</figcaption>
+                                </figure>
+                                <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="5 of 5">
+                                    <a class="shot" href="assets/shots/utd-campaigns-dark.webp" data-supermodal="platforms" data-thumb="assets/shots/thumbs/utd-campaigns-dark.webp" data-caption="Prothero&#x27;s dark scheme (Joomla 3.x UTD)"><img src="assets/shots/thumbs/utd-campaigns-dark.webp" srcset="assets/shots/thumbs/utd-campaigns-dark.webp 640w, assets/shots/utd-campaigns-dark.webp 1920w" sizes="(min-width: 1100px) 620px, 92vw" width="1920" height="1080" alt="The Email Campaigns list on Joomla 3.x UTD in dark mode" loading="lazy" decoding="async" /></a>
+                                    <figcaption>Prothero&#x27;s dark scheme (Joomla 3.x UTD)</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="developers" class="band-ink">
+            <div class="wrap">
+                <div class="sec-head"><span class="stamp"><svg class="icon" aria-hidden="true"><use href="#i-code-slash"></use></svg></span><h2>Plain code you can extend</h2><p class="lead">Plain PHP, CSS and vanilla JavaScript, with no build step and no jQuery. Templates, content sources, mail services and import sources are all small, documented pieces.</p></div>
+                <div class="dev">
+                    <div class="terminal" aria-label="Example: Ottomo's commands on Joomla's command line">
+                        <div class="terminal-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+<pre><code><span class="p">$</span> php cli/joomla.php ottomo:campaign:list
+ ID   Subject                      Status   Recipients   Waiting
+ 30   Weekly Editorial Digest #30  sent     140          0
+ 29   Developer Changelog #29      sent     155          0
+
+<span class="p">$</span> php cli/joomla.php ottomo:check
+ Connection (smtp)   <span class="ok">ok</span>   Ready to send with Custom SMTP.
+ Sender              <span class="ok">ok</span>   SPF: published for example.com.
+ Sender              <span class="ok">ok</span>   DMARC: published (policy: reject).
+
+<span class="p">$</span> php cli/joomla.php ottomo:subscriber:import kunena --topic=3 --dry-run
+<span class="dim">[DRY RUN] Would: Import up to 38700 addresses from Kunena into topic(s) 3</span></code></pre>
+                    </div>
+                    <div class="dev-list">
+                        <div><h3><svg class="icon" aria-hidden="true"><use href="#i-terminal"></use></svg>Command line</h3><p>List, send or resume campaigns from cron, import subscribers, purge unsubscribed addresses and check the sending settings. JSON output and dry runs included.</p></div>
+                        <div><h3><svg class="icon" aria-hidden="true"><use href="#i-envelope-paper"></use></svg>Email templates</h3><p>A folder with a manifest, a PHP layout and sample content; overridable from your site template, installable as a package.</p></div>
+                        <div><h3><svg class="icon" aria-hidden="true"><use href="#i-puzzle"></use></svg>Plugin events</h3><p>Add content sources to the designer's "+" menu, or a mail service with <code>onOttomoSend()</code>, <code>onOttomoVerify()</code> and <code>onOttomoStatistics()</code>.</p></div>
+                        <div><h3><svg class="icon" aria-hidden="true"><use href="#i-shield-check"></use></svg>Secure by default</h3><p>CSRF tokens on every action, one permission check for every route, escaped output, signed click tracking and hashed subscriber links.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="languages">
+            <div class="wrap">
+                <div class="sec-head"><span class="stamp"><svg class="icon" aria-hidden="true"><use href="#i-translate"></use></svg></span><h2>Speaks 51 languages</h2><p class="lead">The administrator, the signup module, the emails Ottomo sends for you and the templates' footers, in English and 50 more.</p></div>
+                <p class="langs">Albanian, Arabic, Belarusian, Bengali, Bosnian, Bulgarian, Chinese (Simplified), Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hausa, Hindi, Hungarian, Icelandic, Indonesian, Irish, Italian, Japanese, Korean, Latvian, Lithuanian, Macedonian, Maltese, Marathi, Montenegrin, Norwegian (Bokmål), Persian, Polish, Portuguese (Brazil), Romanian, Russian, Serbian, Slovak, Slovene, Spanish, Swahili, Swedish, Tamil, Telugu, Thai, Turkish, Ukrainian, Urdu and Vietnamese.</p>
+            </div>
+        </section>
+
+        <section id="screenshots" class="band-mist">
+            <div class="wrap">
+                <div class="sec-head"><span class="stamp"><svg class="icon" aria-hidden="true"><use href="#i-grid-3x3-gap"></use></svg></span><h2>Every screen</h2><p class="lead">The whole of Ottomo on Joomla 3.x UTD and on Joomla 6, at 1920 by 1080. Open one and use the arrow keys, or press G for the grid.</p></div>
+                <h3 class="gal-title">Joomla 3.x UTD (Prothero and Hammond)</h3>
+                <ul class="gal">
+                    <li><a class="shot" href="assets/shots/utd-dashboard.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Dashboard"><img src="assets/shots/thumbs/utd-dashboard.webp" width="640" height="360" alt="Dashboard, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Dashboard</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-campaigns.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Email campaigns"><img src="assets/shots/thumbs/utd-campaigns.webp" width="640" height="360" alt="Email campaigns, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Email campaigns</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-wizard-details.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Wizard: details and recipients"><img src="assets/shots/thumbs/utd-wizard-details.webp" width="640" height="360" alt="Wizard: details and recipients, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Wizard: details and recipients</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-wizard-template.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Wizard: template"><img src="assets/shots/thumbs/utd-wizard-template.webp" width="640" height="360" alt="Wizard: template, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Wizard: template</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-designer.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Wizard: designer"><img src="assets/shots/thumbs/utd-designer.webp" width="640" height="360" alt="Wizard: designer, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Wizard: designer</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-wizard-send.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Wizard: send and results"><img src="assets/shots/thumbs/utd-wizard-send.webp" width="640" height="360" alt="Wizard: send and results, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Wizard: send and results</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-preview.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Preview, desktop"><img src="assets/shots/thumbs/utd-preview.webp" width="640" height="360" alt="Preview, desktop, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Preview, desktop</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-preview-mobile-dark.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Preview, phone in dark mode"><img src="assets/shots/thumbs/utd-preview-mobile-dark.webp" width="640" height="360" alt="Preview, phone in dark mode, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Preview, phone in dark mode</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-subscribers.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Subscribers"><img src="assets/shots/thumbs/utd-subscribers.webp" width="640" height="360" alt="Subscribers, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Subscribers</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-subscriber-edit.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Subscriber profile"><img src="assets/shots/thumbs/utd-subscriber-edit.webp" width="640" height="360" alt="Subscriber profile, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Subscriber profile</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-import.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Import"><img src="assets/shots/thumbs/utd-import.webp" width="640" height="360" alt="Import, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Import</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-topics.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Topics"><img src="assets/shots/thumbs/utd-topics.webp" width="640" height="360" alt="Topics, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Topics</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-templates.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Templates"><img src="assets/shots/thumbs/utd-templates.webp" width="640" height="360" alt="Templates, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Templates</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-settings.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Settings"><img src="assets/shots/thumbs/utd-settings.webp" width="640" height="360" alt="Settings, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Settings</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-cpanel.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Control panel module"><img src="assets/shots/thumbs/utd-cpanel.webp" width="640" height="360" alt="Control panel module, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Control panel module</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-dashboard-dark.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Dashboard, dark"><img src="assets/shots/thumbs/utd-dashboard-dark.webp" width="640" height="360" alt="Dashboard, dark, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Dashboard, dark</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-campaigns-dark.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Email campaigns, dark"><img src="assets/shots/thumbs/utd-campaigns-dark.webp" width="640" height="360" alt="Email campaigns, dark, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Email campaigns, dark</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-frontend.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Signup module"><img src="assets/shots/thumbs/utd-frontend.webp" width="640" height="360" alt="Signup module, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Signup module</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-preferences.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Subscriber preferences"><img src="assets/shots/thumbs/utd-preferences.webp" width="640" height="360" alt="Subscriber preferences, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Subscriber preferences</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-campaign-public.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Campaign in the browser"><img src="assets/shots/thumbs/utd-campaign-public.webp" width="640" height="360" alt="Campaign in the browser, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Campaign in the browser</span></a></li>
+                    <li><a class="shot" href="assets/shots/utd-archive.webp" data-supermodal="all-utd" data-caption="Joomla 3.x UTD: Campaign archive"><img src="assets/shots/thumbs/utd-archive.webp" width="640" height="360" alt="Campaign archive, Joomla 3.x UTD" loading="lazy" decoding="async" /><span>Campaign archive</span></a></li>
+                </ul>
+                <h3 class="gal-title">Joomla 6 (Atum and Cassiopeia)</h3>
+                <ul class="gal">
+                    <li><a class="shot" href="assets/shots/j6-dashboard.webp" data-supermodal="all-j6" data-caption="Joomla 6: Dashboard"><img src="assets/shots/thumbs/j6-dashboard.webp" width="640" height="360" alt="Dashboard, Joomla 6" loading="lazy" decoding="async" /><span>Dashboard</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-campaigns.webp" data-supermodal="all-j6" data-caption="Joomla 6: Email campaigns"><img src="assets/shots/thumbs/j6-campaigns.webp" width="640" height="360" alt="Email campaigns, Joomla 6" loading="lazy" decoding="async" /><span>Email campaigns</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-wizard-details.webp" data-supermodal="all-j6" data-caption="Joomla 6: Wizard: details and recipients"><img src="assets/shots/thumbs/j6-wizard-details.webp" width="640" height="360" alt="Wizard: details and recipients, Joomla 6" loading="lazy" decoding="async" /><span>Wizard: details and recipients</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-wizard-template.webp" data-supermodal="all-j6" data-caption="Joomla 6: Wizard: template"><img src="assets/shots/thumbs/j6-wizard-template.webp" width="640" height="360" alt="Wizard: template, Joomla 6" loading="lazy" decoding="async" /><span>Wizard: template</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-designer.webp" data-supermodal="all-j6" data-caption="Joomla 6: Wizard: designer"><img src="assets/shots/thumbs/j6-designer.webp" width="640" height="360" alt="Wizard: designer, Joomla 6" loading="lazy" decoding="async" /><span>Wizard: designer</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-wizard-send.webp" data-supermodal="all-j6" data-caption="Joomla 6: Wizard: send and results"><img src="assets/shots/thumbs/j6-wizard-send.webp" width="640" height="360" alt="Wizard: send and results, Joomla 6" loading="lazy" decoding="async" /><span>Wizard: send and results</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-preview.webp" data-supermodal="all-j6" data-caption="Joomla 6: Preview, desktop"><img src="assets/shots/thumbs/j6-preview.webp" width="640" height="360" alt="Preview, desktop, Joomla 6" loading="lazy" decoding="async" /><span>Preview, desktop</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-preview-mobile-dark.webp" data-supermodal="all-j6" data-caption="Joomla 6: Preview, phone in dark mode"><img src="assets/shots/thumbs/j6-preview-mobile-dark.webp" width="640" height="360" alt="Preview, phone in dark mode, Joomla 6" loading="lazy" decoding="async" /><span>Preview, phone in dark mode</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-subscribers.webp" data-supermodal="all-j6" data-caption="Joomla 6: Subscribers"><img src="assets/shots/thumbs/j6-subscribers.webp" width="640" height="360" alt="Subscribers, Joomla 6" loading="lazy" decoding="async" /><span>Subscribers</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-subscriber-edit.webp" data-supermodal="all-j6" data-caption="Joomla 6: Subscriber profile"><img src="assets/shots/thumbs/j6-subscriber-edit.webp" width="640" height="360" alt="Subscriber profile, Joomla 6" loading="lazy" decoding="async" /><span>Subscriber profile</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-import.webp" data-supermodal="all-j6" data-caption="Joomla 6: Import"><img src="assets/shots/thumbs/j6-import.webp" width="640" height="360" alt="Import, Joomla 6" loading="lazy" decoding="async" /><span>Import</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-topics.webp" data-supermodal="all-j6" data-caption="Joomla 6: Topics"><img src="assets/shots/thumbs/j6-topics.webp" width="640" height="360" alt="Topics, Joomla 6" loading="lazy" decoding="async" /><span>Topics</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-templates.webp" data-supermodal="all-j6" data-caption="Joomla 6: Templates"><img src="assets/shots/thumbs/j6-templates.webp" width="640" height="360" alt="Templates, Joomla 6" loading="lazy" decoding="async" /><span>Templates</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-settings.webp" data-supermodal="all-j6" data-caption="Joomla 6: Settings"><img src="assets/shots/thumbs/j6-settings.webp" width="640" height="360" alt="Settings, Joomla 6" loading="lazy" decoding="async" /><span>Settings</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-cpanel.webp" data-supermodal="all-j6" data-caption="Joomla 6: Control panel module"><img src="assets/shots/thumbs/j6-cpanel.webp" width="640" height="360" alt="Control panel module, Joomla 6" loading="lazy" decoding="async" /><span>Control panel module</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-dashboard-dark.webp" data-supermodal="all-j6" data-caption="Joomla 6: Dashboard, dark"><img src="assets/shots/thumbs/j6-dashboard-dark.webp" width="640" height="360" alt="Dashboard, dark, Joomla 6" loading="lazy" decoding="async" /><span>Dashboard, dark</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-campaigns-dark.webp" data-supermodal="all-j6" data-caption="Joomla 6: Email campaigns, dark"><img src="assets/shots/thumbs/j6-campaigns-dark.webp" width="640" height="360" alt="Email campaigns, dark, Joomla 6" loading="lazy" decoding="async" /><span>Email campaigns, dark</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-frontend.webp" data-supermodal="all-j6" data-caption="Joomla 6: Signup module"><img src="assets/shots/thumbs/j6-frontend.webp" width="640" height="360" alt="Signup module, Joomla 6" loading="lazy" decoding="async" /><span>Signup module</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-preferences.webp" data-supermodal="all-j6" data-caption="Joomla 6: Subscriber preferences"><img src="assets/shots/thumbs/j6-preferences.webp" width="640" height="360" alt="Subscriber preferences, Joomla 6" loading="lazy" decoding="async" /><span>Subscriber preferences</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-campaign-public.webp" data-supermodal="all-j6" data-caption="Joomla 6: Campaign in the browser"><img src="assets/shots/thumbs/j6-campaign-public.webp" width="640" height="360" alt="Campaign in the browser, Joomla 6" loading="lazy" decoding="async" /><span>Campaign in the browser</span></a></li>
+                    <li><a class="shot" href="assets/shots/j6-archive.webp" data-supermodal="all-j6" data-caption="Joomla 6: Campaign archive"><img src="assets/shots/thumbs/j6-archive.webp" width="640" height="360" alt="Campaign archive, Joomla 6" loading="lazy" decoding="async" /><span>Campaign archive</span></a></li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="airmail" aria-hidden="true"></div>
+    <footer>
+        <div class="wrap">
+            <div class="foot-grid">
+                <div class="foot-brand">
+                    <a href="#top" aria-label="Ottomo home"><img src="assets/logo/ottomo-logo-dark.svg" width="173" height="64" alt="Ottomo" /></a>
+                    <p>Email newsletters and campaigns for Joomla, by JoomlaWorks, the makers of K2.</p>
+                </div>
+                <div>
+                    <h4>Get It</h4>
+                    <ul>
+                        <li><a href="https://github.com/joomlaworks/ottomo/archive/refs/heads/main.zip">Download</a></li>
+                        <li><a href="#install">Install</a></li>
+                        <li><a href="https://github.com/joomlaworks/ottomo/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer">Changelog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Learn</h4>
+                    <ul>
+                        <li><a href="#campaigns">Campaigns</a></li>
+                        <li><a href="#templates">Templates</a></li>
+                        <li><a href="https://github.com/joomlaworks/ottomo/blob/main/TEMPLATE-GUIDE.md" target="_blank" rel="noopener noreferrer">Template Guide</a></li>
+                        <li><a href="https://github.com/joomlaworks/ottomo/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Project</h4>
+                    <ul>
+                        <li><a href="https://github.com/joomlaworks/ottomo" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://github.com/joomlaworks/ottomo/issues" target="_blank" rel="noopener noreferrer">Issues</a></li>
+                        <li><a href="https://www.joomlaworks.net/" target="_blank" rel="noopener noreferrer">JoomlaWorks</a></li>
+                        <li><a href="https://j3xutd.joomlaworks.net/" target="_blank" rel="noopener noreferrer">Joomla 3.x UTD</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="legal">
+                <span>Ottomo is developed by JoomlaWorks Ltd. It is an independent project, not affiliated with or endorsed by Open Source Matters, Inc. or The Joomla! Project&trade;. Joomla!&reg; is a trademark of Open Source Matters, Inc. Other product names are trademarks of their owners.</span>
+                <span>Free software, released under the <a href="https://github.com/joomlaworks/ottomo/blob/main/LICENSE.txt" target="_blank" rel="noopener noreferrer">GNU GPL</a>. Icons: <a href="https://icons.getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap Icons</a> (MIT). Font: <a href="https://github.com/sora-xor/sora-font" target="_blank" rel="noopener noreferrer">Sora</a> (OFL). Galleries: <a href="https://fevangelou.github.io/supermodal.js/" target="_blank" rel="noopener noreferrer">SuperModal.js</a>.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/vendor/supermodal/supermodal.min.js?t=20261123" defer="defer"></script>
+    <script src="assets/js/site.js?t=20261123" defer="defer"></script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3CP16H6X0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N3CP16H6X0');
+    </script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=69266461', 'ym');
+
+        ym(69266461, 'init', {ssr:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/69266461" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</body>
+
+</html>

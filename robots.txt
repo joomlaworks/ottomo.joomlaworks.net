@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ottomo.joomlaworks.net/sitemap.xml
