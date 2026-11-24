@@ -165,7 +165,7 @@ section{padding:96px 0}
 /* Carousels (as on the Joomla 3.x UTD and Meela sites), opened in SuperModal */
 .carousel{position:relative;min-width:0}
 .car-viewport{overflow:hidden;border-radius:var(--r);box-shadow:var(--shadow);background:var(--panel);border:1px solid var(--line)}
-.car-track{display:flex;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.car-track{display:flex;touch-action:pan-y;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
 .car-track.is-dragging{transition:none}
 .car-slide{flex:0 0 100%;min-width:0}
 .shot{display:block;cursor:zoom-in}
@@ -191,12 +191,12 @@ section{padding:96px 0}
 .tpl{display:grid;text-decoration:none;color:var(--ink);cursor:zoom-in}
 .tpl-img{display:block;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--panel);box-shadow:var(--shadow);transition:transform .2s ease}
 .tpl:hover .tpl-img{transform:translateY(-3px)}
-.tpl-img img{width:100%;aspect-ratio:500/355;object-fit:cover;object-position:top}
+.tpl-img img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top}
 .tpl-name{font-weight:600;margin-top:14px}
 .tpl-desc{font-size:14px;color:var(--dim)}
 .tpl:hover{color:var(--ink)}
 @media(max-width:900px){.tpl-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:520px){.tpl-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.tpl-grid{gap:22px 14px;margin-top:32px}.tpl-name{margin-top:10px;font-size:15px}.tpl-desc{font-size:13px}}
 
 /* Deliverability: the pre-flight checklist */
 .checklist{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
